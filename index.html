@@ -23,32 +23,11 @@
   <meta name="twitter:description" content="Where Every Soul Finds Its Story...." />
   <meta name="twitter:image" content="https://shripadaliteraryworks.github.io/logo.jpg" />
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Tailwind config override -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          animation: {
-            'fade-in': 'fadeIn 0.5s ease-out forwards',
-            'slide-up': 'slideUp 0.4s ease-out forwards',
-          },
-          keyframes: {
-            fadeIn: {
-              '0%': { opacity: '0' },
-              '100%': { opacity: '1' },
-            },
-            slideUp: {
-              '0%': { opacity: '0', transform: 'translateY(16px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' },
-            },
-          },
-        },
-      },
-    }
-  </script>
+  <!-- Tailwind CSS — compiled from index.html + main.js (no runtime JS needed).
+       Regenerate after adding new Tailwind classes:
+       npx tailwindcss@3 --content './index.html,./main.js' -o tailwind.css --minify
+       Custom animations (animate-fade-in, animate-slide-up) are in styles.css. -->
+  <link rel="stylesheet" href="tailwind.css" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>

@@ -1,10 +1,13 @@
-/* ── CSS custom properties (set via JS from links.json theme) ─────────────── */
+/* ── CSS custom properties ────────────────────────────────────────────────── */
+/* Defaults match the production light theme (links.json → profile.theme).    */
+/* main.js overrides these at runtime via applyTheme(). Keeping them correct  */
+/* here prevents a flash of dark/wrong colours before JS finishes loading.     */
 :root {
-  --color-bg: #0f0f0f;
-  --color-card: #1a1a1a;
-  --color-accent: #a78bfa;
-  --color-text: #f5f5f5;
-  --color-subtext: #a1a1aa;
+  --color-bg: #faf9f7;
+  --color-card: #ffffff;
+  --color-accent: #9B1C1C;
+  --color-text: #1c1917;
+  --color-subtext: #78716c;
 }
 
 /* ── Base ─────────────────────────────────────────────────────────────────── */
@@ -58,7 +61,9 @@ img.ring-2 {
   background-color: var(--color-card);
   color: var(--color-text);
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  /* Use a theme-aware border so it shows on both light and dark backgrounds.  */
+  /* rgba(255,255,255,0.06) was invisible on the production light theme.       */
+  border: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent);
 }
 
 .link-card:hover,

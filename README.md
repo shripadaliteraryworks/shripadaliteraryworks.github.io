@@ -1,6 +1,8 @@
 # link-me
 
-A minimal, JSON-driven Linktree-style landing page. Vanilla HTML + CSS + [Tailwind CSS](https://tailwindcss.com) CDN. No build step, no framework, no dependencies — everything is configured through a single JSON file.
+A minimal, JSON-driven Linktree-style landing page. Vanilla HTML + CSS + [Tailwind CSS](https://tailwindcss.com). No framework, no ongoing build pipeline — everything is configured through a single JSON file.
+
+> **Tailwind CSS** is compiled once via the CLI and committed as `tailwind.css`. Only re-run the command when new Tailwind classes are added to the HTML or JS.
 
 ## Features
 
@@ -13,12 +15,31 @@ A minimal, JSON-driven Linktree-style landing page. Vanilla HTML + CSS + [Tailwi
 
 ```
 link-me/
-├── index.html      # Page shell — meta tags, Tailwind CDN, loading skeleton
+├── index.html      # Page shell — meta tags, compiled CSS links, loading skeleton
 ├── main.js         # Fetches links.json, renders UI, sets theme + OG meta
-├── styles.css      # CSS custom properties, card styles, animations
+├── styles.css      # CSS custom properties, card styles, custom animations
+├── tailwind.css    # Compiled Tailwind CSS (generated — do not edit by hand)
 ├── links.json      # ← Edit this. Controls all content, links, and visuals
 └── logo.jpg        # Profile avatar (add your own; initials shown as fallback)
 ```
+
+---
+
+## Tailwind CSS
+
+`tailwind.css` is a **compiled, minified static file** — not the Play CDN. The Play CDN generates CSS at runtime via JavaScript; if that script is slow, blocked by an ad-blocker, or races with `main.js`, every element with a Tailwind class renders completely unstyled. A compiled file loads like any normal stylesheet.
+
+### Regenerating after adding new classes
+
+If you add new Tailwind utility classes to `index.html` or `main.js`, regenerate the file and commit it:
+
+```bash
+npx tailwindcss@3 --content './index.html,./main.js' -o tailwind.css --minify
+```
+
+No `package.json` or config file needed — `npx` pulls the CLI on demand.
+
+> Custom animations (`animate-fade-in`, `animate-slide-up`) are defined in `styles.css` and do not need to be in the Tailwind config.
 
 ---
 
@@ -366,4 +387,4 @@ No build command is needed for any of these — the source is the output.
 
 ## OpenGraph / social preview
 
-`og:title`, `og:description`, `og:image`, `twitter:*`, `theme-color`, and `og:url` are all set at runtime from `links.json`. Social crawlers that do not execute JavaScript will see empty meta tags. To fix this, copy the same values into the static `<meta>` tags in `index.html` as a fallback.
+`og:title`, `og:description`, `og:image`, `twitter:*`, `theme-color`, and `og:url` are all set at runtime from `links.json`. The static `<meta>` tags in `index.html` are pre-filled with the production values as a fallback, so social crawlers that do not execute JavaScript will still see correct metadata. Update both `links.json` **and** `index.html` when rebranding.
