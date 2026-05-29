@@ -32,12 +32,12 @@
     {
       "id": "facebook",
       "label": "Facebook",
-      "url": "https://www.facebook.com/shripadaliteraryworks",
+      "url": "https://www.facebook.com/profile.php?id=61584246383987",
       "icon": "facebook",
       "description": "Shri Pada Literary Works",
       "embed": {
         "type": "fb-like",
-        "href": "https://www.facebook.com/shripadaliteraryworks",
+        "href": "https://www.facebook.com/profile.php?id=61584246383987",
         "layout": "button_count",
         "size": "large",
         "action": "like",
@@ -58,7 +58,8 @@
       "label": "Books on Amazon",
       "url": "https://www.amazon.in/Books-Vadrevu-Chinaveerabhadrudu/s?rh=n%3A976389031%2Cp_27%3AVadrevu%2BChinaveerabhadrudu",
       "icon": "amazon",
-      "description": "Books by Vadrevu Chinaveerabhadrudu"    },
+      "description": "Books by Vadrevu Chinaveerabhadrudu"
+    },
     {
       "id": "youtube",
       "label": "YouTube",
@@ -68,11 +69,20 @@
       "action": "Subscribe"
     },
     {
+      "id": "catalog",
+      "label": "View Catalog",
+      "url": "./catalog.pdf",
+      "icon": "books",
+      "description": "Browse our published works",
+      "action": false
+    },
+    {
       "id": "blog",
       "label": "Blog",
       "url": "https://chinaveerabhadrudu.in/",
       "icon": "globe",
-      "description": "chinaveerabhadrudu.in"    }
+      "description": "chinaveerabhadrudu.in"
+    }
   ],
   "media": [
     {
