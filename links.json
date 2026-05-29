@@ -1,0 +1,116 @@
+{
+  "profile": {
+    "name": "Shri Pada Literary Works",
+    "bio": "Where Every Soul Finds Its Story....",
+    "avatar": "./logo.jpg",
+    "favicon": "./logo-favicon.jpg",
+    "theme": {
+      "background": "#faf9f7",
+      "cardBackground": "#ffffff",
+      "accent": "#9B1C1C",
+      "text": "#1c1917",
+      "subtext": "#78716c"
+    }
+  },
+  "contact": {
+    "email": "info.shripada@gmail.com",
+    "phone": "+91 90639 92633",
+    "location": {
+      "label": "12-2-505/28, Flat No 301, Venkat Sai Homes, Kanthi Nagar Colony, Mehdipatnam, Hyderabad — 500028",
+      "url": "https://maps.app.goo.gl/rHFBDYZGZqVfMBu36"
+    }
+  },
+  "links": [
+    {
+      "id": "instagram",
+      "label": "Instagram",
+      "url": "https://www.instagram.com/shripadaliteraryworks",
+      "icon": "instagram",
+      "description": "@shripadaliteraryworks",
+      "action": "Follow"
+    },
+    {
+      "id": "facebook",
+      "label": "Facebook",
+      "url": "https://www.facebook.com/shripadaliteraryworks",
+      "icon": "facebook",
+      "description": "Shri Pada Literary Works",
+      "embed": {
+        "type": "fb-like",
+        "href": "https://www.facebook.com/shripadaliteraryworks",
+        "layout": "button_count",
+        "size": "large",
+        "action": "like",
+        "share": false
+      }
+    },
+    {
+      "id": "wikipedia",
+      "hidden": true,
+      "label": "Wikipedia",
+      "url": "https://te.wikipedia.org/wiki/%E0%B0%B5%E0%B0%BE%E0%B0%A1%E0%B1%8D%E0%B0%B0%E0%B1%87%E0%B0%B5%E0%B1%81_%E0%B0%9A%E0%B0%BF%E0%B0%A8%E0%B0%B5%E0%B1%80%E0%B0%B0%E0%B0%AD%E0%B0%A6%E0%B1%8D%E0%B0%B0%E0%B1%81%E0%B0%A1%E0%B1%81",
+      "icon": "wikipedia",
+      "description": "Vadrevu Chinaveerabhadrudu's Wikipedia"
+    },
+    {
+      "id": "amazon",
+      "hidden": true,
+      "label": "Books on Amazon",
+      "url": "https://www.amazon.in/Books-Vadrevu-Chinaveerabhadrudu/s?rh=n%3A976389031%2Cp_27%3AVadrevu%2BChinaveerabhadrudu",
+      "icon": "amazon",
+      "description": "Books by Vadrevu Chinaveerabhadrudu"    },
+    {
+      "id": "youtube",
+      "label": "YouTube",
+      "url": "https://www.youtube.com/@vadrevu2803",
+      "icon": "youtube",
+      "description": "@vadrevu2803",
+      "action": "Subscribe"
+    },
+    {
+      "id": "blog",
+      "label": "Blog",
+      "url": "https://chinaveerabhadrudu.in/",
+      "icon": "globe",
+      "description": "chinaveerabhadrudu.in"    }
+  ],
+  "media": [
+    {
+      "id": "blog",
+      "label": "Blog",
+      "url": "https://chinaveerabhadrudu.in/",
+      "icon": "globe",
+      "description": "Latest from chinaveerabhadrudu.in",
+      "embed": {
+        "type": "wordpress-feed",
+        "siteUrl": "https://chinaveerabhadrudu.in",
+        "count": 5
+      }
+    },
+    {
+      "id": "books",
+      "hidden": true,
+      "label": "Published Books",
+      "url": "https://chinaveerabhadrudu.in/about-me-3/",
+      "icon": "books",
+      "description": "Free downloads by Vadrevu Chinaveerabhadrudu and more about his literary works that have been published so far and his contributions to Telugu literature.",
+      "embed": {
+        "type": "books-page",
+        "siteUrl": "https://chinaveerabhadrudu.in",
+        "pageSlug": "about-me-3"
+      }
+    },
+    {
+      "id": "youtube-uploads",
+      "label": "YouTube",
+      "url": "https://www.youtube.com/@vadrevu2803",
+      "icon": "youtube",
+      "description": "Latest videos by Vadrevu Chinaveerabhadrudu covering the latest published books and more...",
+      "embed": {
+        "type": "youtube-uploads",
+        "channelHandle": "vadrevu2803",
+        "count": 6
+      }
+    }
+  ]
+}
