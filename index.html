@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <meta name="theme-color" content="" />
+  <link rel="icon" href="" />
+  <title>LinkMe</title>
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:image" content="" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind config override -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-out forwards',
+            'slide-up': 'slideUp 0.4s ease-out forwards',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(16px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+        },
+      },
+    }
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="min-h-screen flex flex-col items-center justify-start py-10 px-4" id="app-body">
+
+  <!-- Loading skeleton -->
+  <div id="loading" class="w-full max-w-md flex flex-col items-center gap-4 animate-pulse">
+    <div class="w-24 h-24 rounded-full bg-zinc-700"></div>
+    <div class="h-5 w-40 rounded bg-zinc-700"></div>
+    <div class="h-4 w-56 rounded bg-zinc-700"></div>
+    <div class="w-full flex flex-col gap-3 mt-4">
+      <div class="h-14 rounded-xl bg-zinc-700"></div>
+      <div class="h-14 rounded-xl bg-zinc-700"></div>
+      <div class="h-14 rounded-xl bg-zinc-700"></div>
+    </div>
+  </div>
+
+  <!-- Main content — injected by main.js -->
+  <main id="content" class="hidden w-full max-w-md flex flex-col items-center gap-3 animate-fade-in">
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
