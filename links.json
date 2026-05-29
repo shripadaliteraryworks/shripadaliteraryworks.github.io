@@ -66,7 +66,8 @@
       "url": "https://www.youtube.com/@vadrevu2803",
       "icon": "youtube",
       "description": "@vadrevu2803",
-      "action": "Subscribe"
+      "action": "Subscribe",
+      "hidden": true
     },
     {
       "id": "catalog",
@@ -81,7 +82,8 @@
       "label": "Blog",
       "url": "https://chinaveerabhadrudu.in/",
       "icon": "globe",
-      "description": "chinaveerabhadrudu.in"
+      "description": "chinaveerabhadrudu.in",
+      "hidden": true
     }
   ],
   "media": [
