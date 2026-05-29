@@ -22,6 +22,30 @@ link-me/
 
 ---
 
+## Static default meta tags (index.html)
+
+`index.html` ships with **pre-filled default values** for the page `<title>`, description, theme colour, favicon, and all OpenGraph / Twitter Card tags. These defaults are intentional — they ensure:
+
+- Crawlers and social-media scrapers that don't execute JavaScript see correct metadata immediately.
+- The page has a meaningful title and OG card even before `links.json` finishes loading.
+
+The defaults are currently set to the **Shri Pada Literary Works** branding:
+
+| Tag | Default value |
+|-----|---------------|
+| `<title>` | `Shri Pada Literary Works` |
+| `og:title` / `twitter:title` | `Shri Pada Literary Works` |
+| `og:description` / `twitter:description` / `description` | `Where Every Soul Finds Its Story....` |
+| `og:image` / `twitter:image` | `https://shripadaliteraryworks.github.io/logo.jpg` |
+| `og:url` | `https://shripadaliteraryworks.github.io` |
+| `og:site_name` | `Shri Pada Literary Works` |
+| `theme-color` | `#9B1C1C` |
+| `<link rel="icon">` | `./logo-favicon.jpg` |
+
+`main.js` **overrides all of these at runtime** with the values from `links.json` (`profile.name`, `profile.bio`, `profile.avatar`, `profile.favicon`, `profile.theme.accent`). If you fork this project, update both `links.json` **and** the defaults in `index.html` to match your brand.
+
+---
+
 ## Configuration
 
 Everything lives in `links.json`. You should never need to touch any other file.
